@@ -91,4 +91,8 @@
     
     return result;
 }
+
+- (IBAction)onMenuItem:(id)sender {
+    NSLog(@"fuck");
+}
 @end

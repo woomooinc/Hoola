@@ -16,4 +16,5 @@
 @property (weak) IBOutlet NSPopUpButtonCell *boardsPopUpButton;
 @property (weak) IBOutlet NSPopUpButtonCell *listsPopUpButton;
 
+- (IBAction)onMenuItem:(id)sender;
 @end
