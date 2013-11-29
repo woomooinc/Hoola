@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC813C0B184903CE005B4182 /* HLServerAPIAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = AC813C0A184903CE005B4182 /* HLServerAPIAgent.m */; };
+		AC813C1018491021005B4182 /* Vendors.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC813C0F18491021005B4182 /* Vendors.plist */; };
+		AC813C1318492E82005B4182 /* HLTrelloCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC813C1218492E82005B4182 /* HLTrelloCellView.m */; };
+		ACB1E2921848B5280006A50D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB1E2911848B5280006A50D /* Cocoa.framework */; };
+		ACB1E29C1848B5280006A50D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E29A1848B5280006A50D /* InfoPlist.strings */; };
+		ACB1E29E1848B5280006A50D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E29D1848B5280006A50D /* main.m */; };
+		ACB1E2A21848B5280006A50D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E2A01848B5280006A50D /* Credits.rtf */; };
+		ACB1E2A51848B5290006A50D /* HLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2A41848B5290006A50D /* HLAppDelegate.m */; };
+		ACB1E2A81848B5290006A50D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E2A61848B5290006A50D /* MainMenu.xib */; };
+		ACB1E2AB1848B5290006A50D /* Hoola.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2A91848B5290006A50D /* Hoola.xcdatamodeld */; };
+		ACB1E2AD1848B5290006A50D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E2AC1848B5290006A50D /* Images.xcassets */; };
+		ACB1E2B41848B5290006A50D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB1E2B31848B5290006A50D /* XCTest.framework */; };
+		ACB1E2B51848B5290006A50D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB1E2911848B5280006A50D /* Cocoa.framework */; };
+		ACB1E2BD1848B5290006A50D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E2BB1848B5290006A50D /* InfoPlist.strings */; };
+		ACB1E2BF1848B5290006A50D /* HoolaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2BE1848B5290006A50D /* HoolaTests.m */; };
+		ACB1E2CE1848B7090006A50D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB1E2CD1848B7090006A50D /* QuartzCore.framework */; };
+		ACB1E2D41848BD540006A50D /* HLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2D31848BD530006A50D /* HLRootViewController.m */; };
+		ACB1E2D81848BD890006A50D /* HLWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2D61848BD890006A50D /* HLWelcomeViewController.m */; };
+		ACB1E2D91848BD890006A50D /* HLWelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E2D71848BD890006A50D /* HLWelcomeViewController.xib */; };
+		ACB1E2DD1848BFD40006A50D /* HLSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2DB1848BFD40006A50D /* HLSplitViewController.m */; };
+		ACB1E2DE1848BFD40006A50D /* HLSplitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E2DC1848BFD40006A50D /* HLSplitViewController.xib */; };
+		ACB1E2E21848E6A10006A50D /* HLTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2E01848E6A10006A50D /* HLTodoViewController.m */; };
+		ACB1E2E31848E6A10006A50D /* HLTodoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E2E11848E6A10006A50D /* HLTodoViewController.xib */; };
+		ACB1E2E71848E6C70006A50D /* HLVenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2E51848E6C70006A50D /* HLVenderViewController.m */; };
+		ACB1E2E81848E6C70006A50D /* HLVenderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E2E61848E6C70006A50D /* HLVenderViewController.xib */; };
+		ACB1E2EB1848E73A0006A50D /* HLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E2EA1848E73A0006A50D /* HLUtils.m */; };
+		D31EB3CD11434C129B9B2FB3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFD48BCD0924CB28C0DB140 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACB1E2B61848B5290006A50D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACB1E2861848B5280006A50D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACB1E28D1848B5280006A50D;
+			remoteInfo = Hoola;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3FFD48BCD0924CB28C0DB140 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A428DDF12DC429CB2F1C5AC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		AC813C09184903CE005B4182 /* HLServerAPIAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLServerAPIAgent.h; sourceTree = "<group>"; };
+		AC813C0A184903CE005B4182 /* HLServerAPIAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLServerAPIAgent.m; sourceTree = "<group>"; };
+		AC813C0F18491021005B4182 /* Vendors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Vendors.plist; sourceTree = "<group>"; };
+		AC813C1118492E82005B4182 /* HLTrelloCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTrelloCellView.h; sourceTree = "<group>"; };
+		AC813C1218492E82005B4182 /* HLTrelloCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTrelloCellView.m; sourceTree = "<group>"; };
+		ACB1E28E1848B5280006A50D /* Hoola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoola.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB1E2911848B5280006A50D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		ACB1E2941848B5280006A50D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		ACB1E2951848B5280006A50D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ACB1E2961848B5280006A50D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ACB1E2991848B5280006A50D /* Hoola-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hoola-Info.plist"; sourceTree = "<group>"; };
+		ACB1E29B1848B5280006A50D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACB1E29D1848B5280006A50D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ACB1E29F1848B5280006A50D /* Hoola-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hoola-Prefix.pch"; sourceTree = "<group>"; };
+		ACB1E2A11848B5280006A50D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		ACB1E2A31848B5280006A50D /* HLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLAppDelegate.h; sourceTree = "<group>"; };
+		ACB1E2A41848B5290006A50D /* HLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLAppDelegate.m; sourceTree = "<group>"; };
+		ACB1E2A71848B5290006A50D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		ACB1E2AA1848B5290006A50D /* Hoola.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hoola.xcdatamodel; sourceTree = "<group>"; };
+		ACB1E2AC1848B5290006A50D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ACB1E2B21848B5290006A50D /* HoolaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoolaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACB1E2B31848B5290006A50D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		ACB1E2BA1848B5290006A50D /* HoolaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HoolaTests-Info.plist"; sourceTree = "<group>"; };
+		ACB1E2BC1848B5290006A50D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		ACB1E2BE1848B5290006A50D /* HoolaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HoolaTests.m; sourceTree = "<group>"; };
+		ACB1E2CD1848B7090006A50D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ACB1E2D21848BD530006A50D /* HLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLRootViewController.h; sourceTree = "<group>"; };
+		ACB1E2D31848BD530006A50D /* HLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLRootViewController.m; sourceTree = "<group>"; };
+		ACB1E2D51848BD890006A50D /* HLWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLWelcomeViewController.h; sourceTree = "<group>"; };
+		ACB1E2D61848BD890006A50D /* HLWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLWelcomeViewController.m; sourceTree = "<group>"; };
+		ACB1E2D71848BD890006A50D /* HLWelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLWelcomeViewController.xib; sourceTree = "<group>"; };
+		ACB1E2DA1848BFD40006A50D /* HLSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLSplitViewController.h; sourceTree = "<group>"; };
+		ACB1E2DB1848BFD40006A50D /* HLSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLSplitViewController.m; sourceTree = "<group>"; };
+		ACB1E2DC1848BFD40006A50D /* HLSplitViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLSplitViewController.xib; sourceTree = "<group>"; };
+		ACB1E2DF1848E6A10006A50D /* HLTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTodoViewController.h; sourceTree = "<group>"; };
+		ACB1E2E01848E6A10006A50D /* HLTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTodoViewController.m; sourceTree = "<group>"; };
+		ACB1E2E11848E6A10006A50D /* HLTodoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLTodoViewController.xib; sourceTree = "<group>"; };
+		ACB1E2E41848E6C70006A50D /* HLVenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLVenderViewController.h; sourceTree = "<group>"; };
+		ACB1E2E51848E6C70006A50D /* HLVenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLVenderViewController.m; sourceTree = "<group>"; };
+		ACB1E2E61848E6C70006A50D /* HLVenderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HLVenderViewController.xib; sourceTree = "<group>"; };
+		ACB1E2E91848E73A0006A50D /* HLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLUtils.h; sourceTree = "<group>"; };
+		ACB1E2EA1848E73A0006A50D /* HLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLUtils.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACB1E28B1848B5280006A50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB1E2CE1848B7090006A50D /* QuartzCore.framework in Frameworks */,
+				ACB1E2921848B5280006A50D /* Cocoa.framework in Frameworks */,
+				D31EB3CD11434C129B9B2FB3 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB1E2AF1848B5290006A50D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB1E2B51848B5290006A50D /* Cocoa.framework in Frameworks */,
+				ACB1E2B41848B5290006A50D /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACB1E2851848B5280006A50D = {
+			isa = PBXGroup;
+			children = (
+				ACB1E2971848B5280006A50D /* Hoola */,
+				ACB1E2B81848B5290006A50D /* HoolaTests */,
+				ACB1E2901848B5280006A50D /* Frameworks */,
+				ACB1E28F1848B5280006A50D /* Products */,
+				5A428DDF12DC429CB2F1C5AC /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		ACB1E28F1848B5280006A50D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1E28E1848B5280006A50D /* Hoola.app */,
+				ACB1E2B21848B5290006A50D /* HoolaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACB1E2901848B5280006A50D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1E2CD1848B7090006A50D /* QuartzCore.framework */,
+				ACB1E2911848B5280006A50D /* Cocoa.framework */,
+				ACB1E2B31848B5290006A50D /* XCTest.framework */,
+				ACB1E2931848B5280006A50D /* Other Frameworks */,
+				3FFD48BCD0924CB28C0DB140 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACB1E2931848B5280006A50D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1E2941848B5280006A50D /* AppKit.framework */,
+				ACB1E2951848B5280006A50D /* CoreData.framework */,
+				ACB1E2961848B5280006A50D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		ACB1E2971848B5280006A50D /* Hoola */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1E2A31848B5280006A50D /* HLAppDelegate.h */,
+				ACB1E2A41848B5290006A50D /* HLAppDelegate.m */,
+				ACB1E2A61848B5290006A50D /* MainMenu.xib */,
+				ACB1E2D21848BD530006A50D /* HLRootViewController.h */,
+				ACB1E2D31848BD530006A50D /* HLRootViewController.m */,
+				ACB1E2AC1848B5290006A50D /* Images.xcassets */,
+				ACB1E2A91848B5290006A50D /* Hoola.xcdatamodeld */,
+				ACB1E2981848B5280006A50D /* Supporting Files */,
+				ACB1E2D51848BD890006A50D /* HLWelcomeViewController.h */,
+				ACB1E2D61848BD890006A50D /* HLWelcomeViewController.m */,
+				ACB1E2D71848BD890006A50D /* HLWelcomeViewController.xib */,
+				ACB1E2DA1848BFD40006A50D /* HLSplitViewController.h */,
+				AC813C09184903CE005B4182 /* HLServerAPIAgent.h */,
+				AC813C0A184903CE005B4182 /* HLServerAPIAgent.m */,
+				ACB1E2DB1848BFD40006A50D /* HLSplitViewController.m */,
+				ACB1E2DC1848BFD40006A50D /* HLSplitViewController.xib */,
+				ACB1E2DF1848E6A10006A50D /* HLTodoViewController.h */,
+				ACB1E2E01848E6A10006A50D /* HLTodoViewController.m */,
+				ACB1E2E11848E6A10006A50D /* HLTodoViewController.xib */,
+				ACB1E2E41848E6C70006A50D /* HLVenderViewController.h */,
+				ACB1E2E51848E6C70006A50D /* HLVenderViewController.m */,
+				ACB1E2E61848E6C70006A50D /* HLVenderViewController.xib */,
+				AC813C1118492E82005B4182 /* HLTrelloCellView.h */,
+				AC813C1218492E82005B4182 /* HLTrelloCellView.m */,
+				ACB1E2E91848E73A0006A50D /* HLUtils.h */,
+				ACB1E2EA1848E73A0006A50D /* HLUtils.m */,
+			);
+			path = Hoola;
+			sourceTree = "<group>";
+		};
+		ACB1E2981848B5280006A50D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1E2991848B5280006A50D /* Hoola-Info.plist */,
+				AC813C0F18491021005B4182 /* Vendors.plist */,
+				ACB1E29A1848B5280006A50D /* InfoPlist.strings */,
+				ACB1E29D1848B5280006A50D /* main.m */,
+				ACB1E29F1848B5280006A50D /* Hoola-Prefix.pch */,
+				ACB1E2A01848B5280006A50D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACB1E2B81848B5290006A50D /* HoolaTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1E2BE1848B5290006A50D /* HoolaTests.m */,
+				ACB1E2B91848B5290006A50D /* Supporting Files */,
+			);
+			path = HoolaTests;
+			sourceTree = "<group>";
+		};
+		ACB1E2B91848B5290006A50D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1E2BA1848B5290006A50D /* HoolaTests-Info.plist */,
+				ACB1E2BB1848B5290006A50D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACB1E28D1848B5280006A50D /* Hoola */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACB1E2C21848B5290006A50D /* Build configuration list for PBXNativeTarget "Hoola" */;
+			buildPhases = (
+				1AC1C46B9E1B4399A4264650 /* Check Pods Manifest.lock */,
+				ACB1E28A1848B5280006A50D /* Sources */,
+				ACB1E28B1848B5280006A50D /* Frameworks */,
+				ACB1E28C1848B5280006A50D /* Resources */,
+				5FB6CA2A7280483D8C90E7A2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hoola;
+			productName = Hoola;
+			productReference = ACB1E28E1848B5280006A50D /* Hoola.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACB1E2B11848B5290006A50D /* HoolaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACB1E2C51848B5290006A50D /* Build configuration list for PBXNativeTarget "HoolaTests" */;
+			buildPhases = (
+				ACB1E2AE1848B5290006A50D /* Sources */,
+				ACB1E2AF1848B5290006A50D /* Frameworks */,
+				ACB1E2B01848B5290006A50D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACB1E2B71848B5290006A50D /* PBXTargetDependency */,
+			);
+			name = HoolaTests;
+			productName = HoolaTests;
+			productReference = ACB1E2B21848B5290006A50D /* HoolaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACB1E2861848B5280006A50D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Jonathan Dang";
+				TargetAttributes = {
+					ACB1E2B11848B5290006A50D = {
+						TestTargetID = ACB1E28D1848B5280006A50D;
+					};
+				};
+			};
+			buildConfigurationList = ACB1E2891848B5280006A50D /* Build configuration list for PBXProject "Hoola" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACB1E2851848B5280006A50D;
+			productRefGroup = ACB1E28F1848B5280006A50D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACB1E28D1848B5280006A50D /* Hoola */,
+				ACB1E2B11848B5290006A50D /* HoolaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACB1E28C1848B5280006A50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB1E29C1848B5280006A50D /* InfoPlist.strings in Resources */,
+				ACB1E2AD1848B5290006A50D /* Images.xcassets in Resources */,
+				ACB1E2E81848E6C70006A50D /* HLVenderViewController.xib in Resources */,
+				ACB1E2A21848B5280006A50D /* Credits.rtf in Resources */,
+				ACB1E2DE1848BFD40006A50D /* HLSplitViewController.xib in Resources */,
+				ACB1E2D91848BD890006A50D /* HLWelcomeViewController.xib in Resources */,
+				ACB1E2E31848E6A10006A50D /* HLTodoViewController.xib in Resources */,
+				ACB1E2A81848B5290006A50D /* MainMenu.xib in Resources */,
+				AC813C1018491021005B4182 /* Vendors.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB1E2B01848B5290006A50D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB1E2BD1848B5290006A50D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AC1C46B9E1B4399A4264650 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5FB6CA2A7280483D8C90E7A2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACB1E28A1848B5280006A50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB1E2E21848E6A10006A50D /* HLTodoViewController.m in Sources */,
+				ACB1E2AB1848B5290006A50D /* Hoola.xcdatamodeld in Sources */,
+				ACB1E2E71848E6C70006A50D /* HLVenderViewController.m in Sources */,
+				ACB1E2D81848BD890006A50D /* HLWelcomeViewController.m in Sources */,
+				ACB1E2A51848B5290006A50D /* HLAppDelegate.m in Sources */,
+				AC813C0B184903CE005B4182 /* HLServerAPIAgent.m in Sources */,
+				AC813C1318492E82005B4182 /* HLTrelloCellView.m in Sources */,
+				ACB1E2DD1848BFD40006A50D /* HLSplitViewController.m in Sources */,
+				ACB1E2EB1848E73A0006A50D /* HLUtils.m in Sources */,
+				ACB1E2D41848BD540006A50D /* HLRootViewController.m in Sources */,
+				ACB1E29E1848B5280006A50D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACB1E2AE1848B5290006A50D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB1E2BF1848B5290006A50D /* HoolaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACB1E2B71848B5290006A50D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACB1E28D1848B5280006A50D /* Hoola */;
+			targetProxy = ACB1E2B61848B5290006A50D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACB1E29A1848B5280006A50D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACB1E29B1848B5280006A50D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		ACB1E2A01848B5280006A50D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACB1E2A11848B5280006A50D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		ACB1E2A61848B5290006A50D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACB1E2A71848B5290006A50D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		ACB1E2BB1848B5290006A50D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACB1E2BC1848B5290006A50D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACB1E2C01848B5290006A50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		ACB1E2C11848B5290006A50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ACB1E2C31848B5290006A50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A428DDF12DC429CB2F1C5AC /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoola/Hoola-Prefix.pch";
+				INFOPLIST_FILE = "Hoola/Hoola-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		ACB1E2C41848B5290006A50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A428DDF12DC429CB2F1C5AC /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoola/Hoola-Prefix.pch";
+				INFOPLIST_FILE = "Hoola/Hoola-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		ACB1E2C61848B5290006A50D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hoola.app/Contents/MacOS/Hoola";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoola/Hoola-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HoolaTests/HoolaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		ACB1E2C71848B5290006A50D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Hoola.app/Contents/MacOS/Hoola";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoola/Hoola-Prefix.pch";
+				INFOPLIST_FILE = "HoolaTests/HoolaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACB1E2891848B5280006A50D /* Build configuration list for PBXProject "Hoola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB1E2C01848B5290006A50D /* Debug */,
+				ACB1E2C11848B5290006A50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACB1E2C21848B5290006A50D /* Build configuration list for PBXNativeTarget "Hoola" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB1E2C31848B5290006A50D /* Debug */,
+				ACB1E2C41848B5290006A50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACB1E2C51848B5290006A50D /* Build configuration list for PBXNativeTarget "HoolaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACB1E2C61848B5290006A50D /* Debug */,
+				ACB1E2C71848B5290006A50D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ACB1E2A91848B5290006A50D /* Hoola.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ACB1E2AA1848B5290006A50D /* Hoola.xcdatamodel */,
+			);
+			currentVersion = ACB1E2AA1848B5290006A50D /* Hoola.xcdatamodel */;
+			path = Hoola.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ACB1E2861848B5280006A50D /* Project object */;
+}

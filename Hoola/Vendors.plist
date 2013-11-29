@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Trello</key>
+	<dict>
+		<key>APIURL</key>
+		<string>https://api.trello.com/1/</string>
+		<key>AppKey</key>
+		<string>570359cc7aae0e0b517fe899aef29e61</string>
+		<key>AppSecret</key>
+		<string>3dfca11ba584374dfdf707a2ce36df9691fbc2434776f3b0393b94c81024de22</string>
+		<key>UserToken</key>
+		<string>9a924ee424faf6e1cfa31bc0a20287c99481f0a964caec247a038eee989584ae</string>
+	</dict>
+</dict>
+</plist>
