@@ -38,6 +38,11 @@ typedef void (^RequestErrorHandler)(NSError *error);
                      completionSuccess:(RequestSuccessHandler)successHandler
                                  error:(RequestErrorHandler)errorHandler;
 
+- (void)updateTrelloCardByCardId:(NSString *)cardId
+                   withDeltaTime:(NSTimeInterval)deltaTime
+               completionSuccess:(RequestSuccessHandler)successHandler
+                           error:(RequestErrorHandler)errorHandler;
+
 #pragma mark - Github
 // @TODO
 

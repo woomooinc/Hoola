@@ -10,4 +10,11 @@
 
 @interface HLTodoViewController : NSViewController
 
+@property (weak) IBOutlet NSTableView *tableView;
+
+- (void)reload;
+
+- (IBAction)startTimer:(NSButton *)btn;
+- (IBAction)pauseTimer:(NSButton *)btn;
+- (IBAction)doneTimer:(NSButton *)btn;
 @end

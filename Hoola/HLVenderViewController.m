@@ -8,6 +8,7 @@
 
 #import "HLVenderViewController.h"
 #import "HLTrelloCellView.h"
+#import "HLTodoCardCollection.h"
 
 @interface HLVenderViewController ()
 @end
@@ -15,6 +16,10 @@
 @implementation HLVenderViewController{
     NSArray *_rawBoards;
     NSMutableArray *_activeBoards;
+    NSArray *_rawLists;
+    NSMutableArray *_activeLists;
+    NSArray *_rawCards;
+    NSMutableArray *_activeCards;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -23,10 +28,9 @@
 
     if (self) {
         _activeBoards = [NSMutableArray new];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(onBoardClickHandler)
-                                                     name:NSPopUpButtonWillPopUpNotification
-                                                   object:Nil];
+        _activeLists = [NSMutableArray new];
+        _activeCards = [NSMutableArray new];
+        
         [self getBoards];
     }
     return self;
@@ -39,6 +43,7 @@
     [agent getTrelloBoardsByUserId:@"test"
                  completionSuccess:^(id success) {
                      _rawBoards = (NSArray *)success;
+                     _activeBoards = [NSMutableArray new];
                      
                      for (NSDictionary* board in _rawBoards){
                          
@@ -58,21 +63,63 @@
     
 }
 
-- (void)onBoardClickHandler
+- (void)getListsByBoardId:(NSString *)boardId
 {
-    NSLog(@"hello");
+    HLServerAPIAgent *agent = [HLServerAPIAgent getServerAPIAgentInstance];
+    [agent getTrelloListsByBoardId:boardId
+                 completionSuccess:^(id success) {
+                     _rawLists = (NSArray *)success;
+                     _activeLists = [NSMutableArray new];
+
+                     for (NSDictionary* list in _rawLists){
+                         
+                         if([[list objectForKey:@"closed"] boolValue] == YES){
+                             continue;
+                         }
+                         
+                         [_activeLists addObject:[list objectForKey:@"name"]];
+                     }
+                     
+                     [self.listsPopUpButton removeAllItems];
+                     [self.listsPopUpButton addItemsWithTitles:_activeLists];
+
+                 } error:^(NSError *error) {
+                     
+                 }];
+}
+
+- (void)getCardsByListId:(NSString *)listId
+{
+    HLServerAPIAgent *agent = [HLServerAPIAgent getServerAPIAgentInstance];
     
+    [agent getTrelloCardsByListId:listId
+                completionSuccess:^(id success) {
+                    _rawCards = (NSArray *)success;
+                    _activeCards = [NSMutableArray new];
+
+                    for (NSDictionary* card in _rawCards){
+
+
+                        if([[card objectForKey:@"closed"] boolValue] == YES){
+                            continue;
+                        }
+                         
+                        [_activeCards addObject:card];
+                    }
+                     
+                    [self.tableView reloadData];
+                     
+                } error:^(NSError *error) {
+                     
+                }];
 }
+
 # pragma mark - NSMenuDelegate
-- (void)menuWillOpen:(NSMenu *)menu
-{
-    NSLog(@"click");
-}
 
 # pragma mark - NSTableViewDataSource
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    return [_activeBoards count];
+    return [_activeCards count];
 }
 
 # pragma mark - NSTableViewDelegate
@@ -80,19 +127,51 @@
    viewForTableColumn:(NSTableColumn *)tableColumn
                   row:(NSInteger)row
 {
-    NSDictionary *board = _activeBoards[row];
-    NSString *boardId = [board objectForKey:@"id"];
-    NSString *name = [board objectForKey:@"name"];
+    NSDictionary *board = _activeCards[row];
 
     HLTrelloCellView *result = [tableView makeViewWithIdentifier:@"MainCell" owner:self];
-    
-    [result.cardId setStringValue:[NSString stringWithFormat:@"%ld", row]];
-    [result.cardTitle setStringValue:name];
+    //    Set row number
+    [result.cardId setStringValue:[NSString stringWithFormat:@"%ld", row + 1]];
+    //    Set row title
+    [result.cardTitle setStringValue:[board objectForKey:@"name"]];
+    //    Set row created time
+    [result.cardCreatedTime setStringValue:[board objectForKey:@"dateLastActivity"]];
     
     return result;
 }
 
-- (IBAction)onMenuItem:(id)sender {
-    NSLog(@"fuck");
+# pragma mark - Action
+- (IBAction)onBoardItemClick:(id)sender {
+    NSPopUpButton *btn = (NSPopUpButton *)sender;
+    NSInteger index = [btn indexOfSelectedItem] + 1;
+    NSLog( @"%ld", (long)index );
+    NSDictionary *selectedBoard = [_rawBoards objectAtIndex:index];
+    NSString *selectedBoardId = [selectedBoard objectForKey:@"id"];
+    
+//    [btn selectItemAtIndex:index];
+    [self getListsByBoardId:selectedBoardId];
+}
+
+- (IBAction)onListItemClick:(id)sender {
+    NSPopUpButton *btn = (NSPopUpButton *)sender;
+    NSInteger index = [btn indexOfSelectedItem];
+    
+    NSDictionary *selectedList = [_rawLists objectAtIndex:index];
+    NSString *selectedListId = [selectedList objectForKey:@"id"];
+
+    [self getCardsByListId:selectedListId];
+}
+
+- (IBAction)addButtonClicked:(NSButton *)sender
+{
+    NSInteger row = [self.tableView rowForView:[sender superview]];
+    [[HLTodoCardCollection sharedCollection] addCard:[_activeCards objectAtIndex:row]];
+}
+
+- (IBAction)removeButtonClicked:(id)sender
+{
+    NSInteger row = [self.tableView rowForView:[sender superview]];
+    NSString *cardId = [[_activeCards objectAtIndex:row] objectForKey:@"id"];
+    [[HLTodoCardCollection sharedCollection] removeCardWithId:cardId];
 }
 @end

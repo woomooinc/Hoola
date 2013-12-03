@@ -13,8 +13,11 @@
 @interface HLVenderViewController : NSViewController<NSTableViewDataSource, NSTableViewDelegate, NSMenuDelegate>
 
 @property (weak) IBOutlet NSTableView *tableView;
-@property (weak) IBOutlet NSPopUpButtonCell *boardsPopUpButton;
-@property (weak) IBOutlet NSPopUpButtonCell *listsPopUpButton;
+@property (weak) IBOutlet NSPopUpButton *boardsPopUpButton;
+@property (weak) IBOutlet NSPopUpButton *listsPopUpButton;
 
-- (IBAction)onMenuItem:(id)sender;
+- (IBAction)onBoardItemClick:(id)sender;
+- (IBAction)onListItemClick:(id)sender;
+- (IBAction)addButtonClicked:(id)sender;
+- (IBAction)removeButtonClicked:(id)sender;
 @end

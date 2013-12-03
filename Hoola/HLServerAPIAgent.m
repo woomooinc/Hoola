@@ -53,4 +53,70 @@
          }];
 }
 
+
+- (void)getTrelloListsByBoardId:(NSString *)boardId
+              completionSuccess:(RequestSuccessHandler)successHandler
+                          error:(RequestErrorHandler)errorHandler;
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *dict = [HLServerAPIAgent getVendorConfigByVendorName:@"Trello"];
+    NSString *url = [NSString stringWithFormat:@"%@boards/%@/lists", [dict objectForKey:@"APIURL"], boardId];
+    NSDictionary *parameters = @{@"key" : [dict objectForKey:@"AppKey"],
+                                 @"token" : [dict objectForKey:@"UserToken"]};
+    
+    [manager GET:url
+      parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             successHandler(responseObject);
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             errorHandler(error);
+         }];
+}
+
+- (void)getTrelloCardsByListId:(NSString *)listId
+             completionSuccess:(RequestSuccessHandler)successHandler
+                         error:(RequestErrorHandler)errorHandler
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *dict = [HLServerAPIAgent getVendorConfigByVendorName:@"Trello"];
+    NSString *url = [NSString stringWithFormat:@"%@lists/%@/cards", [dict objectForKey:@"APIURL"], listId];
+    NSDictionary *parameters = @{@"key" : [dict objectForKey:@"AppKey"],
+                                 @"token" : [dict objectForKey:@"UserToken"]};
+    
+    [manager GET:url
+      parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             successHandler(responseObject);
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             errorHandler(error);
+         }];
+}
+
+
+- (void)updateTrelloCardByCardId:(NSString *)cardId
+                   withDeltaTime:(NSTimeInterval)deltaTime
+               completionSuccess:(RequestSuccessHandler)successHandler
+                           error:(RequestErrorHandler)errorHandler
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *dict = [HLServerAPIAgent getVendorConfigByVendorName:@"Trello"];
+    NSInteger minutes = deltaTime/60;
+    NSInteger seconds = (int)deltaTime % 60;
+    NSString *desc = [ NSString stringWithFormat:@"This task has DONE!! It took me %ld mins %ld secs on this work.", minutes, seconds ];
+    NSString *url = [NSString stringWithFormat:@"%@cards/%@/desc", [dict objectForKey:@"APIURL"], cardId];
+    NSDictionary *parameters = @{@"key" : [dict objectForKey:@"AppKey"],
+                                 @"token" : [dict objectForKey:@"UserToken"],
+                                 @"value" : desc};
+    
+    [manager PUT:url
+      parameters:parameters
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             successHandler(responseObject);
+         }
+         failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             errorHandler(error);
+         }];
+}
 @end

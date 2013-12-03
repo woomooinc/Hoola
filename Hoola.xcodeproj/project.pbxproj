@@ -10,6 +10,8 @@
 		AC813C0B184903CE005B4182 /* HLServerAPIAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = AC813C0A184903CE005B4182 /* HLServerAPIAgent.m */; };
 		AC813C1018491021005B4182 /* Vendors.plist in Resources */ = {isa = PBXBuildFile; fileRef = AC813C0F18491021005B4182 /* Vendors.plist */; };
 		AC813C1318492E82005B4182 /* HLTrelloCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC813C1218492E82005B4182 /* HLTrelloCellView.m */; };
+		AC813C161849841A005B4182 /* HLTodoCardCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = AC813C151849841A005B4182 /* HLTodoCardCollection.m */; };
+		AC813C19184989EE005B4182 /* HLTodoCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC813C18184989EE005B4182 /* HLTodoCellView.m */; };
 		ACB1E2921848B5280006A50D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACB1E2911848B5280006A50D /* Cocoa.framework */; };
 		ACB1E29C1848B5280006A50D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ACB1E29A1848B5280006A50D /* InfoPlist.strings */; };
 		ACB1E29E1848B5280006A50D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB1E29D1848B5280006A50D /* main.m */; };
@@ -54,6 +56,10 @@
 		AC813C0F18491021005B4182 /* Vendors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Vendors.plist; sourceTree = "<group>"; };
 		AC813C1118492E82005B4182 /* HLTrelloCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTrelloCellView.h; sourceTree = "<group>"; };
 		AC813C1218492E82005B4182 /* HLTrelloCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTrelloCellView.m; sourceTree = "<group>"; };
+		AC813C141849841A005B4182 /* HLTodoCardCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTodoCardCollection.h; sourceTree = "<group>"; };
+		AC813C151849841A005B4182 /* HLTodoCardCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTodoCardCollection.m; sourceTree = "<group>"; };
+		AC813C17184989EE005B4182 /* HLTodoCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTodoCellView.h; sourceTree = "<group>"; };
+		AC813C18184989EE005B4182 /* HLTodoCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTodoCellView.m; sourceTree = "<group>"; };
 		ACB1E28E1848B5280006A50D /* Hoola.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoola.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB1E2911848B5280006A50D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		ACB1E2941848B5280006A50D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -185,8 +191,12 @@
 				ACB1E2E61848E6C70006A50D /* HLVenderViewController.xib */,
 				AC813C1118492E82005B4182 /* HLTrelloCellView.h */,
 				AC813C1218492E82005B4182 /* HLTrelloCellView.m */,
+				AC813C17184989EE005B4182 /* HLTodoCellView.h */,
+				AC813C18184989EE005B4182 /* HLTodoCellView.m */,
 				ACB1E2E91848E73A0006A50D /* HLUtils.h */,
 				ACB1E2EA1848E73A0006A50D /* HLUtils.m */,
+				AC813C141849841A005B4182 /* HLTodoCardCollection.h */,
+				AC813C151849841A005B4182 /* HLTodoCardCollection.m */,
 			);
 			path = Hoola;
 			sourceTree = "<group>";
@@ -361,11 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC813C19184989EE005B4182 /* HLTodoCellView.m in Sources */,
 				ACB1E2E21848E6A10006A50D /* HLTodoViewController.m in Sources */,
 				ACB1E2AB1848B5290006A50D /* Hoola.xcdatamodeld in Sources */,
 				ACB1E2E71848E6C70006A50D /* HLVenderViewController.m in Sources */,
 				ACB1E2D81848BD890006A50D /* HLWelcomeViewController.m in Sources */,
 				ACB1E2A51848B5290006A50D /* HLAppDelegate.m in Sources */,
+				AC813C161849841A005B4182 /* HLTodoCardCollection.m in Sources */,
 				AC813C0B184903CE005B4182 /* HLServerAPIAgent.m in Sources */,
 				AC813C1318492E82005B4182 /* HLTrelloCellView.m in Sources */,
 				ACB1E2DD1848BFD40006A50D /* HLSplitViewController.m in Sources */,

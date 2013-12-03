@@ -133,6 +133,7 @@
     
     NSView *view;
     if ([typeName isEqualToString:@"Todo List"]) {
+        [self.todoViewController reload];
         view = self.todoViewController.view;
     } else if ([typeName isEqualToString:@"Vendor List"]) {
         view = self.venderViewController.view;

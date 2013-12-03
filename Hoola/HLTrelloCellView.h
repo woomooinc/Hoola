@@ -11,4 +11,5 @@
 @interface HLTrelloCellView : NSTableCellView
 @property IBOutlet NSTextField *cardId;
 @property IBOutlet NSTextField *cardTitle;
+@property IBOutlet NSTextField *cardCreatedTime;
 @end
